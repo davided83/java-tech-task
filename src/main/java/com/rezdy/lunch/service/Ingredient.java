@@ -1,19 +1,19 @@
 package com.rezdy.lunch.service;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "ingredient")
 public class Ingredient {
-
+    
     @Id
-    private String title;
+    public String title;  
 
-    private LocalDate bestBefore;
+    private LocalDate bestBefore;    
 
     private LocalDate useBy;
-
+    
     public String getTitle() {
         return title;
     }
@@ -23,6 +23,7 @@ public class Ingredient {
         return this;
     }
 
+    
     public LocalDate getBestBefore() {
         return bestBefore;
     }
@@ -32,6 +33,7 @@ public class Ingredient {
         return this;
     }
 
+    
     public LocalDate getUseBy() {
         return useBy;
     }
